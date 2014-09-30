@@ -37,4 +37,16 @@ function draw()
     trailX1 = (trailX0 + trailX1) / 2;
     trailX2 = (trailX1 + trailX2) / 2;
     trailX3 = (trailX2 + trailX3) / 2;
+
+    var trailX = [0, 0, 0, 0];
+
+    trailX[0] = (mouseX + trailX[0]) / 2;
+    trailX[1] = (trailX[0] + trailX[1]) / 2;
+    trailX[2] = (trailX[1] + trailX[2]) / 2;
+    trailX[3] = (trailX[2] + trailX[3]) / 2;
+
+    for (var i = 1; i < 4; i = i + 1)
+     {
+       trailX[i] = (trailX[i-1] + trail[i]) / 2;
+     }
 }
